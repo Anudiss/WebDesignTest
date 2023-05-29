@@ -1,0 +1,950 @@
+@import url('../colors.css');
+@import url('../default/header.css');
+@import url('../default/footer.css');
+@import url('../default/popup.css');
+
+/* SLIDER */
+.slider
+{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0 auto;
+    user-select: none;
+    position: relative;
+}
+
+.slider__item
+{
+    position: relative;
+    display: grid;
+    min-width: 100%;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". .";
+}
+
+.info__block
+{
+    position: relative;
+    display: block;
+    height: 100%;
+    background-color: var(--white);
+}
+
+.info__block h1.title
+{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 64px;
+}
+
+.info__block a.show__more
+{
+    display: inline-block;
+    
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 20px 30px;
+    margin: 0 auto;
+    
+    font-size: 40px;
+    font-weight: 400;
+
+    border-radius: 10px;
+    border: 1px solid var(--darkblue);
+    
+    color: var(--white);
+    background-color: var(--darkblue);
+
+    transition: background-color .1s, color .1s;
+}
+
+.info__block a.show__more:hover
+{
+    background-color: var(--white);
+    color: var(--darkblue);
+    font-weight: 600;
+}
+
+.image__block
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.image__block img
+{
+    display: block;
+    width: 100%;
+}
+
+.image__block .blur
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(3px);
+}
+
+/* SLIDER */
+
+/* Advantaged */
+
+.advantages
+{
+    position: relative;
+}
+
+.advantages h1.title
+{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--lightblue);
+}
+
+.advantage__item
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 88px;
+}
+
+.inner__advatage
+{
+    display: inline-block;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.advantage__item .icon
+{
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--lightblue);
+    user-select: none;
+}
+
+.advantage__item .icon img
+{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.advantage__item .text
+{
+    display: inline-block;
+    font-size: 46px;
+    font-weight: 500;
+    margin: auto;
+    margin-left: 60px;
+}
+
+/* Advantaged */
+
+/* How To order */
+
+.howtoorder
+{
+    margin-top: 88px;
+    position: relative;
+}
+
+.howtoorder h1.title
+{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--lightblue);
+}
+
+.inner__order
+{
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 75px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 100px;
+    grid-template-areas:
+        ". ."
+        ". .";
+    
+}
+
+.order__item .icon
+{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--lightblue);
+}
+
+.order__item .icon img
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.order__item .title
+{
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order__item .text
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+/* How To order */
+
+/* Reviews */
+
+.reviews
+{
+    position: relative;
+    margin-top: 88px;
+    padding-bottom: 88px;
+    background-color: var(--lightblue);
+}
+
+.reviews h1.title
+{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.reviews__container
+{
+    position: relative;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: row;
+    justify-content: flex-start space-around;
+}
+
+.reviews__container::-webkit-scrollbar
+{
+    display: none;
+}
+
+.inner__reviews
+{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.review
+{
+    min-width: 30%;
+    min-height: 50%;
+    border-radius: 30px;
+    margin: 0 10%;
+    background-color: var(--white);
+    position: relative;
+    display: block;
+}
+
+.review .inner__review
+{
+    margin: 10% 10%;
+    position: relative;
+}
+
+.inner__review .avatar
+{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}
+
+.inner__review .name
+{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.inner__review .evaluation
+{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inner__review .evaluation .fa
+{
+    margin: 0 5px;
+}
+
+.inner__review .evaluation .fa
+{
+    color: var(--yellow);
+}
+
+.inner__review .text
+{
+    text-align: justify;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.inner__review .avatar img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--gray);
+}
+
+.reviews .arrow
+{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--gray);
+    background-color: var(--white);
+    transition: background-color .1s, color .1s;
+    z-index: 999;
+}
+
+.reviews .arrow:hover
+{
+    color: var(--white);
+    background-color: var(--gray);
+}
+
+.reviews .arrow .fa
+{
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reviews .arrow.left
+{
+    left: 20px;
+}
+
+.reviews .arrow.right
+{
+    right: 20px;
+}
+
+/* Reviews */
+
+@media (max-width: 1024px) {
+    .info__block h1.title
+    {
+        font-size: 38px;
+    }
+
+    .info__block a.show__more
+    {
+        font-size: 30px;
+        padding: 10px 15px;
+    }
+
+    .advantages h1.title
+    {
+        font-size: 40px;
+        padding: 40px 0;
+    }
+
+    .advantage__item
+    {
+        margin-top: 65px;
+    }
+
+    .advantage__item .icon
+    {
+        width: 150px;
+        height: 150px;
+    }
+
+    .advantage__item .text
+    {
+        font-size: 36px;
+    }
+
+    .howtoorder h1.title
+    {
+        font-size: 40px;
+        padding: 40px 0;
+    }
+
+    .howtoorder .inner__order
+    {
+        margin-top: 50px;
+    }
+
+    .order__item .icon
+    {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .order__item .title
+    {
+        font-size: 32px;
+    }
+
+    .order__item .text
+    {
+        font-size: 23px;
+    }
+
+    .reviews h1.title
+    {
+        font-size: 40px;
+        padding: 40px 0;
+    }
+
+    .reviews__container .review
+    {
+        min-width: 36%;
+        margin: 0 7%;
+    }
+}
+
+@media (max-width: 768px) {
+    .info__block h1.title
+    {
+        font-size: 26px;
+    }
+
+    .info__block a.show__more
+    {
+        font-size: 24px;
+        padding: 7px 8px;
+        bottom: 50px;
+    }
+
+    .advantages h1.title
+    {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+
+    .advantage__item
+    {
+        margin-top: 50px;
+    }
+
+    .advantage__item .icon
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .advantage__item .text
+    {
+        font-size: 28px;
+    }
+
+    .howtoorder h1.title
+    {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+
+    .howtoorder .inner__order
+    {
+        margin-top: 40px;
+    }
+
+    .order__item .icon
+    {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 20px;
+    }
+
+    .order__item .title
+    {
+        font-size: 24px;
+    }
+
+    .order__item .text
+    {
+        font-size: 18px;
+    }
+
+    .reviews h1.title
+    {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+
+    .reviews__container .review
+    {
+        min-width: 50%;
+        margin: 0 25%;
+    }
+}
+
+@media (max-width: 520px) {
+    .main
+    {
+        overflow-x: hidden;
+    }
+
+    .info__block h1.title
+    {
+        font-size: 24px;
+        margin: auto;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .info__block a.show__more
+    {
+        font-size: 18px;
+        padding: 2px 6px;
+        bottom: 20px;
+    }
+
+    .advantages h1.title
+    {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .advantage__item
+    {
+        margin-top: 30px;
+    }
+
+    .advantage__item .icon
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+    .advantage__item .text
+    {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .howtoorder h1.title
+    {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .howtoorder .inner__order
+    {
+        margin-top: 30px;
+    }
+
+    .order__item .icon
+    {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .order__item .title
+    {
+        font-size: 20px;
+    }
+
+    .order__item .text
+    {
+        font-size: 14px;
+    }
+
+    .inner__order
+    {
+        gap: 20px 10px;
+    }
+
+    .reviews
+    {
+        margin-top: 20px;
+    }
+
+    .reviews h1.title
+    {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .reviews__container .review
+    {
+        min-width: 60%;
+        margin: 0 20%;
+    }
+
+    .inner__review .name
+    {
+        font-size: 30px;
+    }
+
+    .inner__review .text
+    {
+        font-size: 20px;
+    }
+
+    .inner__reviews .arrow
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow .fa
+    {
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 425px) {
+    .main
+    {
+        overflow-x: hidden;
+    }
+
+    .info__block h1.title
+    {
+        font-size: 24px;
+    }
+
+    .info__block a.show__more
+    {
+        font-size: 18px;
+        padding: 2px 6px;
+    }
+
+    .advantages h1.title
+    {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .advantage__item
+    {
+        margin-top: 32px;
+    }
+
+    .advantage__item .icon
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+    .advantage__item .text
+    {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .howtoorder h1.title
+    {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .howtoorder .inner__order
+    {
+        margin-top: 30px;
+    }
+
+    .order__item .icon
+    {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .order__item .title
+    {
+        font-size: 20px;
+    }
+
+    .order__item .text
+    {
+        font-size: 14px;
+    }
+
+    .inner__order
+    {
+        gap: 20px 10px;
+    }
+
+    .reviews
+    {
+        margin-top: 20px;
+    }
+
+    .reviews h1.title
+    {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .reviews__container .review
+    {
+        min-width: 60%;
+        margin: 0 20%;
+    }
+
+    .inner__review .name
+    {
+        font-size: 25px;
+    }
+
+    .inner__review .avatar
+    {
+        width: 75px;
+        height: 75px;
+    }
+
+    .inner__review .avatar img
+    {
+        border-width: 3px;
+    }
+
+    .review .inner__review
+    {
+        margin-top: 15px;
+    }
+
+    .inner__review .evaluation
+    {
+        font-size: 14px;
+    }
+
+    .inner__review .text
+    {
+        font-size: 18px;
+    }
+
+    .inner__reviews .arrow
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow .fa
+    {
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main
+    {
+        overflow-x: hidden;
+    }
+
+    .info__block h1.title
+    {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .info__block a.show__more
+    {
+        font-size: 14px;
+        padding: 2px 6px;
+        bottom: 5px;
+    }
+
+    .advantages h1.title
+    {
+        font-size: 20px;
+        padding: 16px 0;
+    }
+
+    .advantage__item
+    {
+        margin-top: 16px;
+    }
+
+    .advantage__item .icon
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+    .advantage__item .text
+    {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .howtoorder
+    {
+        margin-top: 20px;
+    }
+
+    .howtoorder h1.title
+    {
+        font-size: 20px;
+        padding: 16px 0;
+    }
+
+    .howtoorder .inner__order
+    {
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "."
+            "."
+            "."
+            ".";
+    }
+
+    .order__item .icon
+    {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .order__item .title
+    {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .order__item .text
+    {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .inner__order
+    {
+        gap: 0px 0px;
+    }
+
+    .reviews
+    {
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .reviews h1.title
+    {
+        font-size: 20px;
+        padding: 16px 0;
+    }
+
+    .reviews__container .review
+    {
+        min-width: 60%;
+        margin: 0 20%;
+    }
+
+    .inner__review .name
+    {
+        font-size: 20px;
+    }
+
+    .inner__review .avatar
+    {
+        width: 75px;
+        height: 75px;
+    }
+
+    .inner__review .avatar img
+    {
+        border-width: 3px;
+    }
+
+    .review .inner__review
+    {
+        margin-top: 15px;
+    }
+
+    .inner__review .evaluation
+    {
+        font-size: 10px;
+    }
+
+    .inner__review .text
+    {
+        font-size: 16px;
+    }
+
+    .inner__reviews .arrow
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow .fa
+    {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+}
